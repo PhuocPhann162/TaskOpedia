@@ -1,17 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import "./CSS/style.css";
+import Header from "./Header";
+import Student from "./Student";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+function MainBody() {
+  const whatWeWillLearn = "React JS";
+  const lectureCount = 3;
+
+  return (
+    <div>
+      <p>
+        In this course, we will learn {whatWeWillLearn} by building TaskOpedia !
+        <br />
+        Total Lecture - {lectureCount}
+      </p>
+      <ul>
+        <li>Basic Foundation</li>
+        <li>Functional and Class Components</li>
+      </ul>
+      {/* <div>
+        Enter Task : {" "}
+        <input maxLength={30} readOnly={true} placeholder="Ben"></input>
+      </div> */}
+    </div>
+  );
+}
+
+
+function Footer() {
+  return (
+    <p style={{ color: "gray", backgroundColor: "black" }}>Happy Coding!</p>
+  );
+}
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className="container">
+    <Header />
+    <MainBody />
+    <div className="row">Students Enrolled</div>
+    <Student experience={2} name="Kris Walley" />
+    <Student experience={5} name="Angel Patrice" />
+    <Student experience={7} name="Rene Parker" />
+    <Footer />
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
