@@ -1,19 +1,21 @@
-import { faker } from '@faker-js/faker';
 
 export default function Student(props) {
     return (
-      <div className="container p-4">
+      <div className="col-4 p-2">
         <div className="row border">
           <div className="col-2">
             <img
-              src={faker.image.avatar()}
+              src={props.headshot}
               alt="Elon Musk Avatar"
-              className="w-100"
+              className="w-100 py-2"
             ></img>
           </div>
-          <div className="col-10">
+          <div className="col-8">
             {props.name} <br />
             Coding Experience {props.experience} years
+          </div>
+          <div className="col-2">
+            {props.children}
           </div>
         </div>
       </div>
