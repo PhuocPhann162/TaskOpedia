@@ -1,9 +1,10 @@
-export default function Footer() {
+const Footer = () => {
   return (
-    <p 
+    <p className="fixed-bottom"
       style={{
-        color: "gray",
-        backgroundColor: "black",
+        color: "brown",
+        fontWeight: "600",
+        backgroundColor: "lightgray",
         marginTop: "10px",
         marginBottom: "0",
         textAlign: "center",
@@ -12,4 +13,6 @@ export default function Footer() {
       Happy Coding!
     </p>
   );
-}
+};
+
+export default Footer;

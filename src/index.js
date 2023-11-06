@@ -7,7 +7,7 @@ import MainBody from "./MainBody";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <div style={{ backgroundColor: "black", color: "grey" }}>
+  <div style={{ backgroundColor: "black", color: "lightgrey" }}>
     <Header />
     <div className="px-4">
       <MainBody />
